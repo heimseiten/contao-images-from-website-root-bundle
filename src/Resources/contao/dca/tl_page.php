@@ -4,29 +4,29 @@ use Contao\Config;
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 PaletteManipulator::create()
-    ->addLegend('images_from_website_root_legend', 'title_legend', PaletteManipulator::POSITION_AFTER)
-    ->addField('images_from_website_root_logo','images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
-    ->addField('images_from_website_root_header_bg',    'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
-    ->addField('images_from_website_root_custom',    'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
+    ->addLegend('root_img_legend', 'title_legend', PaletteManipulator::POSITION_AFTER)
+    ->addField('root_img_logo','root_img_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('root_img_headerbg', 'root_img_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('root_img_custom', 'root_img_legend', PaletteManipulator::POSITION_APPEND)
     ->applyToPalette('root', 'tl_page') 
     ->applyToPalette('rootfallback', 'tl_page') 
 ;
 
 $GLOBALS['TL_DCA']['tl_page']['fields'] += [    
-    'images_from_website_root_logo' => [
-        'label'     => &$GLOBALS['TL_LANG']['tl_article']['images_from_website_root_logo'],
+    'root_img_logo' => [
+        'label'     => &$GLOBALS['TL_LANG']['tl_article']['root_img_logo'],
         'inputType' => 'fileTree',
         'eval' => array( 'fieldType' => 'radio', 'filesOnly' => true, 'extensions' => \Config::get('validImageTypes') ),
         'sql'       => "blob NULL"
     ],
-    'images_from_website_root_header_bg' => [
-        'label'     => &$GLOBALS['TL_LANG']['tl_article']['images_from_website_root_header_bg'],
+    'root_img_headerbg' => [
+        'label'     => &$GLOBALS['TL_LANG']['tl_article']['root_img_headerbg'],
         'inputType' => 'fileTree',
         'eval' => array( 'fieldType' => 'radio', 'filesOnly' => true, 'extensions' => \Config::get('validImageTypes') ),
         'sql'       => "blob NULL"
     ],   
-    'images_from_website_root_custom' => [
-        'label'     => &$GLOBALS['TL_LANG']['tl_article']['images_from_website_root_custom'],
+    'root_img_custom' => [
+        'label'     => &$GLOBALS['TL_LANG']['tl_article']['root_img_custom'],
         'inputType' => 'fileTree',
         'eval' => array( 'fieldType' => 'radio', 'filesOnly' => true, 'extensions' => \Config::get('validImageTypes') ),
         'sql'       => "blob NULL"

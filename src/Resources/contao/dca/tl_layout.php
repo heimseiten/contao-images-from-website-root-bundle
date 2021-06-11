@@ -5,14 +5,14 @@ use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 PaletteManipulator::create()
     ->addLegend('images_from_website_root_legend', 'sections_legend', PaletteManipulator::POSITION_AFTER)
-    ->addField('logo_from_website_root_size_id',  'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
-    ->addField('header_bg_from_website_root_size_id',  'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
-    ->addField('custom_from_website_root_size_id',  'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('root_img_logo_size',  'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('root_img_headerbg_size',  'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('root_img_custom_size',  'images_from_website_root_legend', PaletteManipulator::POSITION_APPEND)
     ->applyToPalette('default', 'tl_layout') 
 ;
 
 $GLOBALS['TL_DCA']['tl_layout']['fields'] += [    
-    'logo_from_website_root_size_id' => [
+    'root_img_logo_size' => [
         'inputType'        => 'imageSize',
         'options'          => \System::getImageSizes(),
         'reference'        => &$GLOBALS['TL_LANG']['MSC'],
@@ -22,7 +22,7 @@ $GLOBALS['TL_DCA']['tl_layout']['fields'] += [
 ];
 
 $GLOBALS['TL_DCA']['tl_layout']['fields'] += [    
-    'header_bg_from_website_root_size_id' => [
+    'root_img_headerbg_size' => [
         'inputType'        => 'imageSize',
         'options'          => \System::getImageSizes(),
         'reference'        => &$GLOBALS['TL_LANG']['MSC'],
@@ -32,7 +32,7 @@ $GLOBALS['TL_DCA']['tl_layout']['fields'] += [
 ];
 
 $GLOBALS['TL_DCA']['tl_layout']['fields'] += [    
-    'custom_from_website_root_size_id' => [
+    'root_img_custom_size' => [
         'inputType'        => 'imageSize',
         'options'          => \System::getImageSizes(),
         'reference'        => &$GLOBALS['TL_LANG']['MSC'],

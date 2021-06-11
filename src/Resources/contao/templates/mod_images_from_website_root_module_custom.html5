@@ -4,18 +4,18 @@
 
 <?php 
 
-    $arrResults = \Database::getInstance()->query("SELECT id, custom_from_website_root_size_id FROM `tl_layout` WHERE id =". $GLOBALS['objPage']->layoutId ." ;")->fetchAllAssoc();
+    $arrResults = \Database::getInstance()->query("SELECT id, root_img_custom_size FROM `tl_layout` WHERE id =". $GLOBALS['objPage']->layoutId ." ;")->fetchAllAssoc();
     if (count($arrResults) >= 1) {
-        $custom_from_website_root_size_id = deserialize($arrResults[0]['custom_from_website_root_size_id'])[2];
+        $root_img_custom_size = deserialize($arrResults[0]['root_img_custom_size'])[2];
     }
 
-    $arrResults = \Database::getInstance()->query("SELECT id, images_from_website_root_custom FROM `tl_page` WHERE id =". $GLOBALS['objPage']->rootId ." ;")->fetchAllAssoc();
+    $arrResults = \Database::getInstance()->query("SELECT id, root_img_custom FROM `tl_page` WHERE id =". $GLOBALS['objPage']->rootId ." ;")->fetchAllAssoc();
     if (count($arrResults) >= 1) {
-        if ($arrResults[0]['images_from_website_root_custom'] !='') {
+        if ($arrResults[0]['root_img_custom'] !='') {
             echo '<div class="logo">';
                 echo '<div class="image_container">';
                     echo '<a href="">';
-                        echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['images_from_website_root_custom'])->path.'?size='.$custom_from_website_root_size_id.'}}');
+                        echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['root_img_custom'])->path.'?size='.$root_img_custom_size.'}}');
                     echo '</a>';
                 echo '</div>';        
             echo '</div>';        
