@@ -13,7 +13,10 @@
 /**
  * Miscelaneous
  */
-//$GLOBALS['TL_LANG']['MSC'][''] = '';
+$GLOBALS['TL_LANG']['tl_layout']['root_img_size_legend'] = 'Größe der im Startpunkt der Webseite eingestellen Bilder';
+$GLOBALS['TL_LANG']['tl_layout']['root_img_logo_size'] = ['Größe des Logos','Aktuell werden nur vordefinierte Bildgrößen unterstützt.'];
+$GLOBALS['TL_LANG']['tl_layout']['root_img_headerbg_size'] = ['Größe des Header-Hintergundes','Aktuell werden nur vordefinierte Bildgrößen unterstützt.'];
+$GLOBALS['TL_LANG']['tl_layout']['root_img_custom_size'] = ['Größe des benutzerdefinierten Bildes','Aktuell werden nur vordefinierte Bildgrößen unterstützt.'];
 
 /**
  * Errors
