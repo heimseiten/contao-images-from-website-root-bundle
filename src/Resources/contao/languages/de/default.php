@@ -18,6 +18,11 @@ $GLOBALS['TL_LANG']['tl_layout']['root_img_logo_size'] = ['Größe des Logos','A
 $GLOBALS['TL_LANG']['tl_layout']['root_img_headerbg_size'] = ['Größe des Header-Hintergundes','Aktuell werden nur vordefinierte Bildgrößen unterstützt.'];
 $GLOBALS['TL_LANG']['tl_layout']['root_img_custom_size'] = ['Größe des benutzerdefinierten Bildes','Aktuell werden nur vordefinierte Bildgrößen unterstützt.'];
 
+$GLOBALS['TL_LANG']['tl_page']['root_img_legend'] = 'Bilder des Startpunktes der Webseite';
+$GLOBALS['TL_LANG']['tl_page']['root_img_logo'] = ['Logo des Startpunktes der Webseite',''];
+$GLOBALS['TL_LANG']['tl_page']['root_img_headerbg'] = ['Header-Hintergund des Startpunktes der Webseite',''];
+$GLOBALS['TL_LANG']['tl_page']['root_img_custom'] = ['benutzerdefiniertes Bild des Startpunktes der Webseite',''];
+
 /**
  * Errors
  */
