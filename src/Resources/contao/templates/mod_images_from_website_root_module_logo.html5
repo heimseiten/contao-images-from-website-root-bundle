@@ -14,7 +14,7 @@
         if ($arrResults[0]['root_img_logo'] !='') {
             echo '<div class="logo">';
                 echo '<div class="image_container">';
-                    echo '<a href="">';
+                    echo '<a href="{{env::url}}">';
                         echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['root_img_logo'])->path.'?size='.$root_img_logo_size.'}}');
                     echo '</a>';
                 echo '</div>';        
