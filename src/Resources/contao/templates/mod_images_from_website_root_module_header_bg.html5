@@ -9,13 +9,13 @@
         $root_img_headerbg_size = deserialize($arrResults[0]['root_img_headerbg_size'])[2];
     }
 
-    $arrResults = \Database::getInstance()->query("SELECT id, root_img_bg FROM `tl_page` WHERE id =". $GLOBALS['objPage']->rootId ." ;")->fetchAllAssoc();
+    $arrResults = \Database::getInstance()->query("SELECT id, root_img_headerbg FROM `tl_page` WHERE id =". $GLOBALS['objPage']->rootId ." ;")->fetchAllAssoc();
     if (count($arrResults) >= 1) {
-        if ($arrResults[0]['root_img_bg'] !='') {
+        if ($arrResults[0]['root_img_headerbg'] !='') {
             echo '<div class="logo">';
                 echo '<div class="image_container">';
                     echo '<a href="">';
-                        echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['root_img_bg'])->path.'?size='.$root_img_headerbg_size.'}}');
+                        echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['root_img_headerbg'])->path.'?size='.$root_img_headerbg_size.'}}');
                     echo '</a>';
                 echo '</div>';        
             echo '</div>';        
