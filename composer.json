@@ -45,6 +45,5 @@
     },
     "extra": {
         "contao-manager-plugin": "Heimseiten\\ContaoImagesFromWebsiteRootBundle\\ContaoManager\\Plugin"
-    },
-    "version": "0.0.1"
+    }
 }
