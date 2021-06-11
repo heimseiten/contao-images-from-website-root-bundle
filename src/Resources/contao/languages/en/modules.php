@@ -13,6 +13,6 @@
 /**
 * Frontend modules
 */
-$GLOBALS['TL_LANG']['FMD']['images_from_website_root_module_logo'] = ['Logo aus dem Startpunkt der Webseite', 'Fügt Bilder aus dem Startpunkt der Webseite ein'];
-$GLOBALS['TL_LANG']['FMD']['images_from_website_root_module_header_bg'] = ['Header-Hintergrund aus dem Startpunkt der Webseite', 'Fügt Bilder aus dem Startpunkt der Webseite ein'];
-$GLOBALS['TL_LANG']['FMD']['images_from_website_root_module_custom'] = ['Benutzerdefiniertes Bild aus dem Startpunkt der Webseite', 'Fügt Bilder aus dem Startpunkt der Webseite ein'];
+$GLOBALS['TL_LANG']['FMD']['images_from_website_root_module_logo'] = ['Logo from the starting point of the web page', 'Inserts images from the starting point of the web page'];
+$GLOBALS['TL_LANG']['FMD']['images_from_website_root_module_header_bg'] = ['Header background from the starting point of the web page', 'Inserts images from the starting point of the web page'];
+$GLOBALS['TL_LANG']['FMD']['images_from_website_root_module_custom'] = ['Custom image from web page starting point', 'Inserts images from web page starting point'];
