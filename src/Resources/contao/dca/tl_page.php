@@ -14,19 +14,19 @@ PaletteManipulator::create()
 
 $GLOBALS['TL_DCA']['tl_page']['fields'] += [    
     'root_img_logo' => [
-        'label'     => &$GLOBALS['TL_LANG']['tl_article']['root_img_logo'],
+        'label'     => &$GLOBALS['TL_LANG']['tl_page']['root_img_logo'],
         'inputType' => 'fileTree',
         'eval' => array( 'fieldType' => 'radio', 'filesOnly' => true, 'extensions' => \Config::get('validImageTypes') ),
         'sql'       => "blob NULL"
     ],
     'root_img_headerbg' => [
-        'label'     => &$GLOBALS['TL_LANG']['tl_article']['root_img_headerbg'],
+        'label'     => &$GLOBALS['TL_LANG']['tl_page']['root_img_headerbg'],
         'inputType' => 'fileTree',
         'eval' => array( 'fieldType' => 'radio', 'filesOnly' => true, 'extensions' => \Config::get('validImageTypes') ),
         'sql'       => "blob NULL"
     ],   
     'root_img_custom' => [
-        'label'     => &$GLOBALS['TL_LANG']['tl_article']['root_img_custom'],
+        'label'     => &$GLOBALS['TL_LANG']['tl_page']['root_img_custom'],
         'inputType' => 'fileTree',
         'eval' => array( 'fieldType' => 'radio', 'filesOnly' => true, 'extensions' => \Config::get('validImageTypes') ),
         'sql'       => "blob NULL"
