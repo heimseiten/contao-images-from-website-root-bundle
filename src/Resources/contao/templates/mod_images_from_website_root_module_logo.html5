@@ -1,0 +1,27 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<?php 
+
+    $arrResults = \Database::getInstance()->query("SELECT id, logo_from_website_root_size_id FROM `tl_layout` WHERE id =". $GLOBALS['objPage']->layoutId ." ;")->fetchAllAssoc();
+    if (count($arrResults) >= 1) {
+        $logo_from_website_root_size_id = deserialize($arrResults[0]['logo_from_website_root_size_id'])[2];
+    }
+
+    $arrResults = \Database::getInstance()->query("SELECT id, images_from_website_root_logo FROM `tl_page` WHERE id =". $GLOBALS['objPage']->rootId ." ;")->fetchAllAssoc();
+    if (count($arrResults) >= 1) {
+        if ($arrResults[0]['images_from_website_root_logo'] !='') {
+            echo '<div class="logo">';
+                echo '<div class="image_container">';
+                    echo '<a href="">';
+                        echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['images_from_website_root_logo'])->path.'?size='.$logo_from_website_root_size_id.'}}');
+                    echo '</a>';
+                echo '</div>';        
+            echo '</div>';        
+        }
+    }
+
+?>
+
+<?php $this->endblock(); ?>

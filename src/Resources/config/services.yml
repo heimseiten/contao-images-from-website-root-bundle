@@ -1,0 +1,17 @@
+services:
+    # Contao frontend module Heimseiten\ContaoImagesFromWebsiteRootBundle\Controller\FrontendModule\ImagesFromWebsiteRootModuleController
+    Heimseiten\ContaoImagesFromWebsiteRootBundle\Controller\FrontendModule\ImagesFromWebsiteRootModuleController:
+        arguments:
+            - '@session'
+        tags:
+            - { name: contao.frontend_module, category: miscellaneous, template: mod_images_from_website_root_module_logo, type: images_from_website_root_module_logo }
+            - { name: contao.frontend_module, category: miscellaneous, template: mod_images_from_website_root_module_header_bg, type: images_from_website_root_module_header_bg }
+            - { name: contao.frontend_module, category: miscellaneous, template: mod_images_from_website_root_module_custom, type: images_from_website_root_module_custom }
+            - { name: container.service_subscriber }
+        public: true
+
+    _instanceof:
+      Symfony\Bundle\FrameworkBundle\Controller\AbstractController:
+        calls:
+          - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
+          
