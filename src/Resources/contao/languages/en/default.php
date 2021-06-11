@@ -13,10 +13,15 @@
 /**
  * Miscelaneous
  */
-$GLOBALS['TL_LANG']['tl_layout']['root_img_size_legend'] = 'Size of the images set in the starting point of the web page';
+$GLOBALS['TL_LANG']['tl_layout']['root_img_size_legend'] = 'Size of the images set in the website root';
 $GLOBALS['TL_LANG']['tl_layout']['root_img_logo_size'] = ['Size of the logo','Currently only predefined image sizes are supported.'];
 $GLOBALS['TL_LANG']['tl_layout']['root_img_headerbg_size'] = ['Header background size','Currently only predefined image sizes are supported.'];
 $GLOBALS['TL_LANG']['tl_layout']['root_img_custom_size'] = ['Custom image size','Currently only predefined image sizes are supported.'];
+
+$GLOBALS['TL_LANG']['tl_page']['root_img_legend'] = 'Images of the website root';
+$GLOBALS['TL_LANG']['tl_page']['root_img_logo'] = ['Logo of the website root',''];
+$GLOBALS['TL_LANG']['tl_page']['root_img_headerbg'] = ['Header background of the website root',''];
+$GLOBALS['TL_LANG']['tl_page']['root_img_custom'] = ['Custom image of the website root',''];
 
 /**
  * Errors
