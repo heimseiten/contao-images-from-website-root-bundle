@@ -12,13 +12,9 @@
     $arrResults = \Database::getInstance()->query("SELECT id, root_img_headerbg FROM `tl_page` WHERE id =". $GLOBALS['objPage']->rootId ." ;")->fetchAllAssoc();
     if (count($arrResults) >= 1) {
         if ($arrResults[0]['root_img_headerbg'] !='') {
-            echo '<div id="header_background">';
-                echo '<div class="inside">';
-                    echo '<div class="ce_image header_background">';
-                        echo '<div class="image_container">';
-                            echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['root_img_headerbg'])->path.'?size='.$root_img_headerbg_size.'}}');
-                        echo '</div>';        
-                    echo '</div>';        
+            echo '<div class="ce_image header_background">';
+                echo '<div class="image_container">';
+                    echo('{{picture::'.\FilesModel::findByUuid($arrResults[0]['root_img_headerbg'])->path.'?size='.$root_img_headerbg_size.'}}');
                 echo '</div>';        
             echo '</div>';        
         }
